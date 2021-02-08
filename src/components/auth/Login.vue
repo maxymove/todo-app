@@ -1,6 +1,7 @@
 <template>
-  <v-app
-    ><div>
+  <v-app>
+    <div>{{ msg }}</div>
+    <div>
       <v-card width="500" class="mx-auto mt-5">
         <v-card-title>Login Form</v-card-title>
         <v-card-text>
@@ -19,7 +20,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      msg: this.$store.state.username
+    }
+  }
+}
 </script>
 
 <style>
